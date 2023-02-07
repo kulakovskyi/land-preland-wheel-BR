@@ -1,0 +1,600 @@
+@media screen and (min-width: 2000px) and (min-height: 1025px)
+  .bonus
+    &__main
+      &-wrapper
+        transform-origin: bottom center
+        transform: scale(1.1)
+
+@media screen and (min-width: 2000px) and (min-height: 1080px)
+  .bonus
+    &__main
+      &-wrapper
+        transform-origin: bottom center
+        transform: scale(1.2)
+
+@media screen and (min-width: 2400px) and (min-height: 1120px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(1.2)
+    &__main
+      &-wrapper
+        transform-origin: bottom center
+        transform: scale(1.3)
+      &-txt
+        transform: translateX(-50%) scale(1.1)
+
+@media screen and (max-width: 1920px) and (max-height: 940px)
+  .bonus
+    &__main
+      &-wrapper
+        transform-origin: bottom center
+        transform: scale(0.97)
+
+@media screen and (max-width: 1700px)
+  .bonus
+    &__main
+      &-txt
+        transform: translateX(-50%) scale(0.95)
+
+@media screen and (max-width: 1700px) and (max-height: 920px)
+  .bonus
+    &__main
+      &-wrapper
+        transform: scale(0.91)
+
+@media screen and (max-width: 1700px) and (max-height: 840px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.9)
+    &__main
+      &-txt
+        transform: translateX(-50%) scale(0.85)
+      &-wrapper
+        transform: scale(0.85)
+
+@media screen and (max-width: 1700px) and (max-height: 780px)
+  .bonus
+    &__main
+      &-wrapper
+        transform: scale(0.8)
+
+@media screen and (max-width: 1600px)
+  .bonus
+    &__footer
+      transform-origin: right bottom
+      transform: scale(0.9)
+      bottom: 20px
+      right: 20px
+    &__main
+      &-logo
+        width: 380px
+
+@media screen and (max-width: 1400px) and (max-height: 1025px)
+  .bonus
+    &__footer
+      transform-origin: right bottom
+      transform: scale(0.8)
+      bottom: 20px
+      right: 20px
+
+@media screen and (max-width: 1400px) and (max-height: 768px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.8)
+    &__main
+      &-logo
+        width: 355px
+      &-txt
+        top: 10%
+    &__footer
+      transform-origin: right bottom
+      transform: scale(0.9)
+
+@media screen and (max-width: 1400px) and (max-height: 720px)
+  .bonus
+    &__main
+      &-wrapper
+        transform: scale(0.75)
+        bottom: -173px
+
+@media screen and (max-width: 1400px) and (max-height: 710px)
+  .bonus
+    &__main
+      &-txt
+        transform: translateX(-50%) scale(0.75)
+      &-wrapper
+        transform: scale(0.7)
+
+@media screen and (max-width: 1400px) and (max-height: 660px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.7)
+    &__main
+      &-wrapper
+        transform: scale(0.65)
+        bottom: -155px
+
+@media screen and (max-width: 1300px) and (max-height: 630px)
+  .bonus
+    &__main
+      &-txt
+        transform: translateX(-50%) scale(0.65)
+      &-wrapper
+        transform: scale(0.6)
+        bottom: -132px
+
+@media screen and (max-width: 1300px) and (max-height: 630px)
+  .bonus
+    &__main
+      &-txt
+        top: 7%
+
+@media screen and (max-width: 1300px) and (max-height: 585px)
+  .bonus
+    &__main
+      &-txt
+        top: 5%
+
+@media screen and (max-width: 1300px) and (min-height: 1000px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.75)
+    &__footer
+      transform: scale(0.66)
+
+@media screen and (max-width: 1250px)
+  .bonus
+    &__footer
+      transform: scale(0.66)
+
+@media screen and (max-width: 1125px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.65)
+    &__main
+      &-logo
+        width: 308px
+    &__footer
+      transform: scale(0.57)
+
+@media screen and (max-width: 1046px)
+  .bonus
+    &::before
+      bottom: -229px
+    &__footer
+      transform: scale(0.54)
+    &__main
+      &-logo
+        width: 308px
+
+@media screen and (max-width: 1020px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-wrapper
+        transform: scale(0.75)
+        bottom: -149px
+
+@media screen and (max-width: 970px) and (orientation: landscape)
+  .bonus
+    &__main
+      &-txt
+        transform: translateX(-50%) scale(0.65)
+        top: 8.5%
+      &-wrapper
+        transform: scale(0.7)
+        bottom: -109px
+
+@media screen and (max-width: 910px) and (orientation: landscape)
+  .bonus
+    &__footer
+      transform: scale(0.44)
+
+/****************************************TABLET***************************************************/
+
+@media screen and (max-width: 1024px) and (orientation: portrait)
+  .bonus
+    &__footer
+      width: 100%
+      right: 0
+      bottom: 0
+      padding: 20px 15px
+      background: $blue
+      transform: scale(1)
+      flex-direction: row
+      justify-content: center
+      align-items: center
+      &-top
+        margin: 0 23px 0 0
+    &__main
+      &-logo
+        width: 308px
+      &-txt
+        font-size: 64px
+        line-height: 83px
+        transform: translateX(-50%) scale(1)
+        .top
+          &::after
+            width: 94px
+            height: 46px
+            margin: 0 0 0 15px
+        .bottom
+          top: -15px
+          &::before
+            width: 94px
+            height: 46px
+            margin: 0 25px 0 0
+      &-wrapper
+        bottom: -56px
+
+@media screen and (max-width: 1024px) and (orientation: portrait) and (min-height: 1300px)
+  .bonus
+    &__main
+      &-txt
+        top: 14%
+        transform: translateX(-50%) scale(1.2)
+      &-wrapper
+        transform: scale(1.2)
+        bottom: -20px
+
+@media screen and (max-width: 840px) and (orientation: portrait)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.65)
+    &__main
+      &-txt
+        top: 14%
+      &-wrapper
+        bottom: -70px
+
+@media screen and (max-width: 840px) and (orientation: portrait) and (max-height: 1050px)
+  .bonus
+    &__main
+      &-txt
+        top: 12%
+
+@media screen and (max-width: 840px) and (orientation: portrait) and (max-height: 1020px)
+  .bonus
+    &__main
+      &-wrapper
+        transform-origin: bottom center
+        transform: scale(0.9)
+        bottom: -54px
+
+@media screen and (max-width: 840px) and (orientation: portrait) and (max-height: 960px)
+  .bonus
+    &__main
+      &-wrapper
+        transform: scale(0.8)
+        bottom: -36px
+      &-txt
+        top: 13%
+
+
+@media screen and (max-width: 770px) and (orientation: portrait)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.6)
+
+@media screen and (max-width: 720px) and (orientation: portrait)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.55)
+    &__main
+      &-txt
+        transform: translateX(-50%) scale(0.9)
+
+/****************************************MOBILE***************************************************/
+
+@media screen and (max-width: 660px) and (orientation: portrait)
+  .bonus
+    overflow-y: scroll
+    &__overlay
+      &-chip
+        transform: scale(0.5)
+        z-index: -1
+      .overlayChip-1
+        bottom: 205px
+        left: 2px
+      .overlayChip-2
+        bottom: -52px
+        left: 36px
+      .overlayChip-3
+        left: 173px
+        top: -176px
+      .overlayChip-4
+        top: -81px
+        left: 62px
+        transform: scale(0.8)
+      .overlayChip-5
+        top: -131px
+        right: -83px
+      .overlayChip-6
+        top: 269px
+        right: 33px
+      .overlayChip-7
+        bottom: 152px
+        right: -33px
+    &__firstWin
+      &-title
+        &::before
+          margin-bottom: -2px
+    &__secondWin
+      &-title
+        &::before
+          margin-bottom: 143px
+    &__firstWin,
+    &__secondWin
+      margin-top: 50px
+      transform: scale(1)
+      &-sum
+        font-size: 24px
+        line-height: 40px
+      &-title
+        font-size: 96px
+        line-height: 114px
+        .wrap
+          white-space: normal
+          display: flex
+          flex-direction: column
+          align-items: center
+          span
+            margin: -37px 0 -30px
+            font-size: 83px
+            line-height: 98px
+      &-try
+        font-size: 18px
+        line-height: 24px
+        max-width: 310px
+        margin: -34px 0 23px 0
+      &-btn
+        font-size: 24px
+        line-height: 31px
+        padding: 31px 57px 29px
+    &__firstWin
+      &-btn
+        font-size: 24px
+        line-height: 31px
+        padding: 31px 74px 29px
+      .overlayChip-1
+        bottom: 109px
+        left: -3px
+      .overlayChip-2
+        bottom: -181px
+        left: 36px
+      .overlayChip-3
+        left: 173px
+        top: -243px
+      .overlayChip-4
+        top: -139px
+        left: 49px
+        transform: scale(0.8)
+      .overlayChip-5
+        top: -198px
+        right: -83px
+      .overlayChip-6
+        top: 235px
+        right: 33px
+      .overlayChip-7
+        bottom: 4px
+        right: -37px
+    &::before
+      content: none
+    &__footer
+      position: absolute
+      flex-direction: column
+      bottom: -170px
+      &-top
+        margin: 0 0 35px 0
+    &__main
+      flex-direction: column
+      align-items: center
+      justify-content: center
+      &-logo
+        width: 201px
+      &-txt
+        font-size: 35px
+        line-height: 48px
+        .top
+          left: -15px
+          &::after
+            content: none
+        .bottom
+          top: -5px
+          right: -15px
+          &::before
+            content: none
+      &-wrapper
+        transform: scale(0.7)
+        bottom: -63px
+      &-wheel
+        &-arrowMob
+          display: block
+          width: 65px
+          height: 180px
+          background: url("../img/arrowMob.svg") no-repeat 0 0/contain
+          &-1
+            position: absolute
+            transform: rotate(-22deg)
+            left: 234px
+            top: -39px
+            opacity: 0
+            animation: 4s infinite opacityArrow ease-in-out
+          &-2
+            position: absolute
+            left: 370px
+            top: -70px
+            opacity: 0
+            animation: 4s infinite opacityArrow ease-in-out
+            animation-delay: 1s
+          &-3
+            position: absolute
+            transform: rotate(22deg)
+            right: 234px
+            top: -39px
+            opacity: 0
+            animation: 4s infinite opacityArrow ease-in-out
+            animation-delay: 2s
+        &::before
+          animation: 4s infinite pulseBackWheelMob ease-in-out
+        &-wrap
+          &::before
+            animation: 4s infinite pulseBackWheelMob ease-in-out
+          &::after
+            animation: 4s infinite pulseBackWheelMob ease-in-out
+
+@media screen and (max-width: 660px) and (orientation: portrait) and (max-height: 720px)
+  .bonus
+    &__main
+      &-wrapper
+        bottom: -45px
+
+@media screen and (max-width: 400px) and (orientation: portrait) and (max-height: 670px)
+  .bonus
+    &__main
+      &-wrapper
+        transform: scale(0.68)
+        bottom: -24px
+
+@media screen and (max-width: 400px) and (orientation: portrait)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.9)
+
+@media screen and (max-width: 380px) and (orientation: portrait) and (max-height: 650px)
+  .bonus
+    &__main
+      &-wrapper
+        transform: scale(0.6)
+        bottom: 9px
+
+
+@media screen and (max-width: 380px) and (orientation: portrait) and (max-height: 570px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.8)
+    &__main
+      &-wrapper
+        transform: scale(0.58)
+        bottom: 18px
+
+@media screen and (max-width: 360px) and (orientation: portrait)
+  .bonus
+    &__footer
+      &-top
+        margin: 0 0 17px 0
+      &-bottom
+        transform: scale(0.86)
+
+@media screen and (max-width: 330px) and (orientation: portrait)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.75)
+    &__main
+      &-txt
+        transform: translateX(-50%) scale(0.8)
+      &-wrapper
+        transform: scale(0.55)
+        bottom: 15px
+
+/****************************************LANDSCAPE**********************************************/
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+  .bonus
+    &__overlay
+      &-chip
+        transform: scale(0.75)
+        z-index: -1
+      .overlayChip-2
+        transform: scale(0.75) rotate(45deg)
+      .overlayChip-3
+        transform: scale(0.75) rotate(-45deg)
+      .overlayChip-4
+        transform: scale(0.95)
+        left: 224px
+      .overlayChip-6
+        transform: scale(0.85) rotate(270deg)
+    &__firstWin,
+    &__secondWin
+      margin-top: 25px
+      transform: scale(0.55)
+    &::before
+      content: none
+    &__footer
+      bottom: 15px
+      right: 15px
+      &-top
+        margin: 0 0 22px 0
+    &__main
+      &-logo
+        width: 205px
+      &-txt
+        transform: translateX(-50%) scale(0.35)
+        top: -5.5%
+      &-wrapper
+        transform: scale(0.5)
+        bottom: -98px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 430px)
+  .bonus
+    &__main
+      &-txt
+        top: -40px
+      &-wrapper
+        transform: scale(0.45)
+        bottom: -90px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 385px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.45)
+    &__footer
+      transform: scale(0.4)
+    &__main
+      &-txt
+        top: -40px
+        transform: translateX(-50%) scale(0.3)
+      &-wrapper
+        transform: scale(0.4)
+        bottom: -80px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 355px)
+  .bonus
+    &__footer
+      transform: scale(0.35)
+    &__main
+      &-logo
+        width: 177px
+      &-txt
+        top: -58px
+        transform: translateX(-50%) scale(0.25)
+      &-wrapper
+        transform: scale(0.35)
+        bottom: -70px
+
+@media screen and (max-width: 920px) and (orientation: landscape) and (max-height: 310px)
+  .bonus
+    &__firstWin,
+    &__secondWin
+      transform: scale(0.4)
+    &__main
+      &-wrapper
+        transform: scale(0.3)
+        bottom: -60px
+
+@media screen and (max-width: 560px) and (orientation: landscape)
+  .bonus
+    &__footer
+      transform: scale(0.3)

@@ -1,0 +1,590 @@
+$blue: #000055
+$magenta: #ff267e
+$green: #05C489
+$green-hover: #09B47F
+$grey: #EDEDED
+$text: #292929
+
+$font-suisse-bold: SuisseIntl-Bold, sans-serif // 700
+$font-wulkan: WulkanDisplay, sans-serif //
+$font-suisse-med: SuisseIntl-Medium, sans-serif // 500
+$font-rubik: Rubik, sans-serif //
+
+body
+  -webkit-tap-highlight-color: rgba(0,0,0,0)
+  overscroll-behavior: none
+  img
+    max-width: 100%
+    height: auto
+
+.container
+  max-width: 700px
+  margin: auto
+
+.position
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  margin: auto
+
+
+.bonus
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    background: url('../img/star.svg') repeat 50% 0/cover
+    animation: 8s infinite backgroundAnim ease-in-out
+  width: 100%
+  height: 100%
+  overflow: hidden
+  position: relative
+  @media screen and (min-width: 700px) and (orientation: landscape) and (min-height: 451px)
+    background: #005 url('../img/bg-desc.jpg') no-repeat 50% 0/cover
+  @media screen and (min-width: 601px) and (max-width: 1024px) and (orientation: portrait)
+    background: #005  url('../img/bg-desc.jpg') no-repeat 50% 0/cover
+  @media screen and (max-width: 600px) and (orientation: portrait)
+    background: #005 url("../img/bg-mob.jpg") no-repeat 50% 0%/cover
+  @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+    background: #005 url("../img/bg-landscape.jpg") no-repeat 50% 0/cover
+  &__overlay
+    background: rgba(18, 12, 41, 0.5)
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    z-index: 10
+    transition: opacity .7s linear, visibility .5s linear
+    &-chip
+      position: absolute
+    .overlayChip-1
+      width: 314px
+      height: 239px
+      bottom: -163px
+      left: -97px
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-1.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-1.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-1-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-1-mob.png") no-repeat 0 0/contain
+    .overlayChip-2
+      width: 324px
+      height: 265px
+      bottom: 101px
+      left: -344px
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-2.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-2.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-2-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-2-mob.png") no-repeat 0 0/contain
+    .overlayChip-3
+      width: 238px
+      height: 223px
+      left: -251px
+      top: -275px
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-3.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-3.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-3-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-3-mob.png") no-repeat 0 0/contain
+    .overlayChip-4
+      width: 190px
+      height: 215px
+      top: -286px
+      left: 88px
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-4.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-4.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-4-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-4-mob.png") no-repeat 0 0/contain
+    .overlayChip-5
+      width: 365px
+      height: 183px
+      top: -223px
+      right: -194px
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-5.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-5.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-5-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-5-mob.png") no-repeat 0 0/contain
+    .overlayChip-6
+      width: 316px
+      height: 238px
+      top: -38px
+      right: -376px
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-6.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-6.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-6-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-6-mob.png") no-repeat 0 0/contain
+    .overlayChip-7
+      width: 359px
+      height: 335px
+      bottom: -193px
+      right: -208px
+      @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+        background: url("../img/chip-7.png") no-repeat 0 0/contain
+      @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+        background: url("../img/chip-7.png") no-repeat 0 0/contain
+      @media screen and (max-width: 550px) and (orientation: portrait)
+        background: url("../img/chip-7-mob.png") no-repeat 0 0/contain
+      @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+        background: url("../img/chip-7-mob.png") no-repeat 0 0/contain
+  &__firstWin,
+  &__secondWin
+    margin-top: 100px
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    &-info
+      display: flex
+      flex-direction: column
+      align-items: center
+      justify-content: center
+    &-sum
+      font-family: $font-suisse-bold
+      font-size: 24px
+      line-height: 40px
+      text-align: center
+      letter-spacing: 0.03em
+      text-transform: uppercase
+      color: $grey
+      margin-bottom: -40px
+    &-title
+      span
+        position: absolute
+        z-index: 1
+        top: 53px
+      .wrap
+        font-family: $font-rubik
+        white-space: nowrap
+        position: absolute
+        z-index: 1
+        top: 53px
+        display: flex
+        align-items: center
+        span
+          position: static !important
+          font-family: $font-rubik
+          color: $grey
+          text-shadow: 0px 0px 35px rgb(255 38 126 / 50%), 0px 0px 2px #ff267e, 0px 2px 5px rgb(0 0 0 / 30%)
+      font-family: $font-rubik
+      font-size: 128px
+      line-height: 152px
+      letter-spacing: 0.01em
+      text-transform: uppercase
+      text-shadow: 0px 0px 35px rgb(255 38 126 / 50%), 0px 0px 2px #ff267e, 0px 2px 5px rgb(0 0 0 / 30%)
+      color: $magenta
+      position: relative
+      display: flex
+      flex-direction: column
+      align-items: center
+      &::before
+        content: ''
+        display: block
+        margin-bottom: 28px
+        width: 666px
+        height: 114px
+        background: url('../img/light.png') no-repeat 50% 0/contain
+      &::after
+        content: ''
+        display: block
+
+        width: 666px
+        height: 114px
+        transform: rotate(180deg)
+        background: url('../img/light.png') no-repeat 50% 0/contain
+    &-try
+      font-family: $font-suisse-med
+      font-size: 18px
+      line-height: 24px
+      text-align: center
+      letter-spacing: 0.03em
+      color: $grey
+      margin: -10px 0 30px 0
+    &-btn
+      font-family: $font-suisse-bold
+      cursor: pointer
+      padding: 31px 74px 29px
+      font-size: 24px
+      line-height: 31px
+      color: $blue
+      text-align: center
+      letter-spacing: 0.08em
+      text-transform: uppercase
+      background: #05C489
+      box-shadow: 0px 0px 44px rgba(5, 196, 137, 0.44), 0px 0px 24px #05C489
+      border-radius: 4px
+      transition: .3s ease
+      &:hover
+        background: #0ba275
+        box-shadow: 0px 0px 50px rgba(5, 196, 137, 0.44), 0px 0px 24px #05C489
+
+
+  &__main
+    height: 100%
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: flex-end
+    &-logo
+      background: url("../img/logo.svg") no-repeat 0 0/contain
+      width: 474px
+      height: 154px
+      position: absolute
+      top: 0
+      left: 0
+      z-index: 1
+    &-txt
+      font-size: 96px
+      line-height: 125px
+      text-transform: uppercase
+      letter-spacing: 0.02em
+      position: absolute
+      z-index: 5
+      top: 11%
+      left: 50%
+      transform: translateX(-50%)
+      .top
+        font-family: $font-suisse-bold
+        display: flex
+        align-items: center
+        white-space: nowrap
+        color: $grey
+        text-shadow: 0px 0px 31px rgba(255, 255, 255, 0.5)
+        position: relative
+        left: 70px
+        &::after
+          content: ''
+          display: inline-block
+          margin: 0 0 0 30px
+          background: url("../img/arrow.svg") no-repeat 0 0/contain
+          width: 130px
+          height: 68px
+          animation: 2.5s infinite arrowRight ease
+      .bottom
+        font-family: $font-wulkan
+        position: relative
+        top: -20px
+        display: flex
+        align-items: center
+        white-space: nowrap
+        color: $magenta
+        text-shadow: 0px 0px 31px rgba(255, 38, 126, 0.5), 0px 0px 31px rgba(255, 38, 126, 0.5)
+        &::before
+          content: ''
+          display: inline-block
+          left: 17px
+          position: relative
+          margin: 0 50px 0 0
+          background: url("../img/arrow.svg") no-repeat 0 0/contain
+          width: 130px
+          height: 68px
+          transform: scale(-1)
+
+          animation: 2.5s infinite arrowLeft ease
+          animation-delay: 1.25s
+
+    &-wrapper
+      position: relative
+      z-index: 2
+      width: 800px
+      height: 800px
+      display: flex
+      justify-content: center
+      align-items: center
+      bottom: -210px
+    &-wheel
+      position: relative
+      width: 800px
+      height: 800px
+      &::before
+        content: ''
+        position: absolute
+        width: 1017px
+        height: 1017px
+        border-radius: 50%
+        border: 2px solid rgba(255, 38, 126, 0.29)
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        animation: 4s infinite pulseBackWheel ease-in-out
+        animation-delay: 1s
+      &-arrowMob
+        display: none
+      &-wrap
+        position: relative
+        width: 800px
+        height: 800px
+        &::before
+          content: ''
+          position: absolute
+          width: 831px
+          height: 831px
+          border-radius: 50%
+          border: 2px solid rgba(255, 38, 126, 0.41)
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          animation: 4s infinite pulseBackWheel ease-in-out
+        &::after
+          content: ''
+          position: absolute
+          width: 917px
+          height: 917px
+          border-radius: 50%
+          border: 2px solid rgba(255, 38, 126, 0.29)
+          top: 50%
+          left: 50%
+          transform: translate(-50%, -50%)
+          animation: 4s infinite pulseBackWheel ease-in-out
+          animation-delay: 0.5s
+      &-arrow
+        background: url("../img/wheel-arrow.svg") no-repeat 0 0/contain
+        filter: drop-shadow(0px 0px 3px #05C489) drop-shadow(0px 0px 9px #05C489)
+        width: 82px
+        height: 87px
+        top: -204px
+        z-index: 3
+      &-ellipse-one
+        width: 335px
+        height: 335px
+        border-radius: 50%
+        border: 2px solid rgba(255, 255, 255, 0.16)
+        z-index: 3
+      &-ellipse-two
+        width: 483px
+        height: 483px
+        border-radius: 50%
+        border: 2px solid rgba(255, 255, 255, 0.1)
+        z-index: 3
+      &-btn-bottom
+        width: 200px
+        height: 200px
+        border-radius: 50%
+        background: radial-gradient(50% 50% at 50% 50%, #9EFFE1 0%, #05C486 99.99%, #05C489 100%)
+        box-shadow: 0px 0px 52px #1CFFB9, 0px 4px 176px #000000, inset 0px 0px 32px #76FFD5
+        z-index: 3
+        &::before
+          content: ''
+          position: absolute
+          top: 0
+          bottom: 0
+          left: -7px
+          right: 0
+          margin: auto
+          border-radius: 50%
+          width: 210px
+          height: 210px
+          border: 2px solid #05C489
+          filter: drop-shadow(0px 0px 9px #05C489) drop-shadow(0px 0px 9px #05C489)
+
+      &-btn
+        width: 160px
+        height: 160px
+        z-index: 4
+        cursor: pointer
+        filter: drop-shadow(0 0 27px rgba(23, 111, 82, 0.4))
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-btn.png") no-repeat 0 0/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-btn.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-btn-mob.png") no-repeat 0 0/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-btn-mob.png") no-repeat 0 0/contain
+      &-reel
+        width: 800px
+        height: 800px
+        filter: drop-shadow(0 0 35px $magenta)
+        z-index: 2
+        margin: 0
+        animation: 3s infinite shadowReel ease-in-out
+        @media screen and (min-width: 551px) and (orientation: landscape) and (min-height: 500px)
+          background: url("../img/wheel-reel-2.png") no-repeat 0 0/contain
+        @media screen and (min-width: 551px) and (max-width: 1024px) and (orientation: portrait)
+          background: url("../img/wheel-reel-2.png") no-repeat 0 0/contain
+        @media screen and (max-width: 550px) and (orientation: portrait)
+          background: url("../img/wheel-reel-mob-2.png") no-repeat 0 0/contain
+        @media (max-width: 920px) and (orientation: landscape) and (max-height: 450px)
+          background: url("../img/wheel-reel-mob-2.png") no-repeat 0 0/contain
+
+  &__footer
+    position: absolute
+    bottom: 40px
+    right: 65px
+    z-index: 4
+    display: flex
+    flex-direction: column
+    align-items: stretch
+    &-top
+      max-width: 343px
+      margin: 0 0 35px 0
+      min-width: 165px
+    &-link
+      display: inline-block
+    &-bottom
+      display: flex
+      align-items: stretch
+    &-appStore
+      max-width: 155px
+      min-width: 155px
+      margin: 0 13px 0 0
+    &-googlePlay
+      min-width: 174px
+      max-width: 174px
+
+
+.pulse-btn
+  animation: 1.8s infinite pulse-btn ease-in-out
+
+
+@keyframes pulse-btn
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.11)
+  100%
+    transform: scale(1)
+
+@keyframes shadowReel
+  0%
+    filter: drop-shadow(0 0 35px $magenta)
+  50%
+    filter: drop-shadow(0 0 65px $magenta)
+  100%
+    filter: drop-shadow(0 0 35px $magenta)
+
+
+@keyframes pulseBackWheel
+  0%
+    transform: translate(-50%, -50%) scale(1)
+    opacity: 0
+  50%
+    transform: translate(-50%, -50%) scale(1.1)
+    opacity: 1
+  100%
+    transform: translate(-50%, -50%) scale(1)
+    opacity: 0
+
+
+@keyframes pulseBackWheelMob
+  0%
+    transform: translate(-50%, -50%) scale(0.8)
+    opacity: 0
+  50%
+    transform: translate(-50%, -50%) scale(0.9)
+    opacity: 1
+  100%
+    transform: translate(-50%, -50%) scale(0.8)
+    opacity: 0
+
+@keyframes opacityArrow
+  0%
+    opacity: 0
+  50%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes arrowRight
+  0%
+    transform: translateX(-10px)
+  50%
+    transform: translateX(10px)
+
+  100%
+    transform: translateX(-10px)
+
+@keyframes arrowLeft
+  0%
+    transform: scale(-1) translateX(10px)
+  50%
+    transform: scale(-1) translateX(-10px)
+
+  100%
+    transform: scale(-1) translateX(10px)
+
+@keyframes backgroundAnim
+  0%
+    transform: scale(1)
+    opacity: 0
+  50%
+    transform: scale(1.3)
+    opacity: 1
+  100%
+    transform: scale(1.3)
+    opacity: 0
+
+
+.reel-rotation-first
+  animation: 6s reel-rotation-first cubic-bezier(.25,.75,.5,1.05) forwards
+
+@keyframes reel-rotation-first
+  0%
+    transform: rotate(0deg)
+  80%
+    transform: rotate(998deg)
+  90%
+    transform: rotate(986deg)
+  100%
+    transform: rotate(992deg)
+
+.reel-rotation-second
+  animation: 6s reel-rotation-second cubic-bezier(.25,.75,.5,1.05) forwards
+
+@keyframes reel-rotation-second
+  0%
+    transform: rotate(992deg)
+  80%
+    transform: rotate(1852deg)
+  90%
+    transform: rotate(1840deg)
+  100%
+    transform: rotate(1846deg)
+
+.hide
+  display: none
+
+.opacity-overlay
+  opacity: 0
+  visibility: hidden
+
+.blur
+  filter: blur(10px)
+  transition: .7s ease
+
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    left: 0
+    top: 0
+    background: rgba(18, 12, 41, 0.8)
