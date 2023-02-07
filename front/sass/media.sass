@@ -219,6 +219,7 @@
         line-height: 83px
         transform: translateX(-50%) scale(1)
         .top
+          left: 85px
           &::after
             width: 94px
             height: 46px
@@ -279,6 +280,9 @@
 
 @media screen and (max-width: 770px) and (orientation: portrait)
   .bonus
+    &__main
+      &-txt
+        transform: translateX(-50%) scale(.87)
     &__firstWin,
     &__secondWin
       transform: scale(0.6)
@@ -330,7 +334,9 @@
     &__secondWin
       &-title
         &::before
-          margin-bottom: 143px
+          margin-bottom: 138px
+      &-btn
+        padding: 31px 46px 29px !important
     &__firstWin,
     &__secondWin
       margin-top: 50px
@@ -339,8 +345,8 @@
         font-size: 24px
         line-height: 40px
       &-title
-        font-size: 96px
-        line-height: 114px
+        font-size: 64px
+        line-height: 91px
         .wrap
           white-space: normal
           display: flex
@@ -360,6 +366,28 @@
         line-height: 31px
         padding: 31px 57px 29px
     &__firstWin
+      &-title
+        span
+          &::before
+            font-size: 24px
+            line-height: 40px
+            white-space: nowrap
+            bottom: -22px
+    &__secondWin
+      &-title
+        .wrap
+          span
+            position: relative !important
+            top: 14px
+            font-size: 53px
+            line-height: 118px
+          &::before
+            bottom: -17px
+            left: 60px
+            top: 71px
+          &::after
+            bottom: -18px
+            right: 70px
       &-btn
         font-size: 24px
         line-height: 31px
@@ -390,7 +418,6 @@
       content: none
     &__footer
       position: absolute
-      flex-direction: column
       bottom: -170px
       &-top
         margin: 0 0 35px 0
@@ -404,7 +431,7 @@
         font-size: 35px
         line-height: 48px
         .top
-          left: -15px
+          left: 10px
           &::after
             content: none
         .bottom
